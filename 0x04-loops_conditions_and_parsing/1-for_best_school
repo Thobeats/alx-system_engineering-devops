@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# write a bash script that prints Best School 10 times
+seq 10 > limit;
+for i in `cat limit`; do
+	echo "Best School"
+done
