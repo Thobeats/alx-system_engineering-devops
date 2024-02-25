@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
-# write a bash script that prints Best School 10 times
-ls > lsFile
-search="-"
-for idx in $(cat lsFile); do
-	dashIndex=${idx#*"$search"}
-	printf '%s\n' "$dashIndex"
-done
+# write a bash script that displays the current directory in a list
+for contents in *; do (echo "$contents" | rev | cut -d '-' -f -1 | rev); done
