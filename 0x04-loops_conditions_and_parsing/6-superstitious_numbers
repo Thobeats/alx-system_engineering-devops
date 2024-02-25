@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# write a bash script that prints bad luck for the 4th iteration, good luck for the 8th iteration else Best School
+indx=1
+while (( indx < 21 )); do
+	echo "$indx"
+	case "$indx" in
+		[4]) echo "bad luck in China";;
+		[9]) echo "bad luck in Japan";;
+		17) echo "bad luck in Italy";;
+	esac
+	((indx++))
+done
