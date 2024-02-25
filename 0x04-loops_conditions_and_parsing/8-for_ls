@@ -2,7 +2,7 @@
 # write a bash script that prints Best School 10 times
 ls > lsFile
 search="-"
-for idx in `cat lsFile`; do
-	dashIndex=${idx#*$search}
+for idx in $(cat lsFile); do
+	dashIndex=${idx#*"$search"}
 	printf '%s\n' "$dashIndex"
 done
