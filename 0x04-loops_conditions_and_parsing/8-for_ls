@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# write a bash script that prints Best School 10 times
+ls > lsFile
+search="-"
+for idx in `cat lsFile`; do
+	dashIndex=${idx#*$search}
+	echo "$dashIndex"
+	#printf '%s\n' "${idx:$dashIndex}"
+done
+
