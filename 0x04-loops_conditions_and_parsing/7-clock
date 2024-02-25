@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# write a bash script that displays the time for 12hours and 59 minutes
+hour=0
+hourMax=12
+minuteMax=59
+while (( hour <= hourMax )); do
+	echo "Hour: $hour"
+	minute=1
+	while (( minute <= minuteMax )); do
+		echo "$minute"
+		((minute++))
+	done
+	((hour++))
+done
