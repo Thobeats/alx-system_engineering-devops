@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# write a bash script that prints Best School 10 times
+indx=0
+while (( indx < 10 )); do
+	echo "Best School"
+	if (( indx == 8 )); then
+		echo "Hi"
+	fi
+	((indx++))
+done
