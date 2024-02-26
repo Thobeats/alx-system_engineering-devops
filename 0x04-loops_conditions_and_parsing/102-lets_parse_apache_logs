@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Write a bash script that reads the apache log file using awk
+cat < apache-access.log | awk '{print $1,$9}'
+
