@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Write a bash script that reads the /etc/passwd folder
 FILENAME="/etc/passwd"
-while IFS=: read -r username password userid groupid comment homedir cmdshell
+while read -r line;
 do
-	echo "$username, $userid, $homedir"
+	echo "$line" | cut -d ":" -f 1,3,6
 done < $FILENAME
