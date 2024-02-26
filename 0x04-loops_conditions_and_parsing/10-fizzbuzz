@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# write a bash script that:
+# displays FizzBuzz if the number is a multiple of 3 and 5
+# displays Buzz if the number is a multiple of 5
+# displays Fizz if the number is a multiple of 3
+idx=1
+while (( idx <= 100 )); do
+	if (( (idx % 3) == 0 && (idx % 5) == 0 ))
+	then 
+		echo "FizzBuzz"
+	elif (( (idx % 3) == 0 ))
+	then
+		echo "Fizz"
+	elif (( (idx % 5) == 0 ))
+	then
+		echo "Buzz"
+	else
+		echo "$idx"
+	fi
+	((idx++))
+done
