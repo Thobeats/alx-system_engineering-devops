@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Write a bash script that displays 'to Infinity and beyond' indefinitely and adds sleep 2 with 'I am invicible!!!' if terminated
+while true; do echo 'To infinity and beyond' && sleep 2 trap "I am invincible!!!"  SIGTERM ; done
