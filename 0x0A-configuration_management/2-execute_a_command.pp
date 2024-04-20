@@ -4,6 +4,6 @@
 # use the pkill command
 
 exec { 'killmenow':
-  command     => 'pkill killmenow',
+  command     => '/usr/bin/pkill killmenow',
   refreshonly => true
 }
