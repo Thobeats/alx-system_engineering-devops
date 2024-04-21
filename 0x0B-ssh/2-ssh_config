@@ -1,5 +1,4 @@
 
-# Write a Bash script that creates an RSA key pair.
 # This is an ssh-config file, the configurations in this file
 # can be customized per user's preference
 # configurations on the command line take preference over the configuration
@@ -9,4 +8,4 @@
 Host 54.237.67.242
     PasswordAuthentication no
     IdentityFile ~/.ssh/school
-    
+
