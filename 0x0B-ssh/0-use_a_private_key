@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# SSH connection command using single-character flags
+ssh -i ~/.ssh/school ubuntu@$54.237.67.242
+
