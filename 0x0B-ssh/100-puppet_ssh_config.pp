@@ -2,6 +2,7 @@
 # so that you can connect to a server without
 # typing a password.
 file {'/etc/ssh/ssh_config':
-  content     => 'PasswordAuthentication no
-  Identity ~/.ssh/school'
+  content     => 'Host 54.237.67.242
+                    PasswordAuthentication no
+                    IdentityFile ~/.ssh/school'
 }
