@@ -2,7 +2,7 @@
 # A Bash script that Installs nginx
 sudo apt-get -y update
 sudo apt-get -y install nginx
-USER=whoami
+USER=$(whoami)
 sudo chown "$USER":"$USER" /var/www/html/
 # Create index.html file with "Hello World!"
 sudo echo "Hello World!" > /var/www/html/index.html
