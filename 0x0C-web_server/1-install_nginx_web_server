@@ -7,4 +7,4 @@ sed -i 's/.*listen 80;/listen 80;/g' /etc/nginx/sites-available/default
 # Restart nginx
 sudo /etc/init.d/nginx restart
 # Create index.html file with "Hello World!"
-echo "<html><body>Hello World!</body></html>" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
