@@ -16,7 +16,7 @@ file { '/var/www/html/index.html':
   mode    => '0744',
   owner   => 'ubuntu',
   group   => 'ubuntu',
-  content => 'Hello World'
+  content => "Hello World!\n"
 }
 
 #Redirect to 301
