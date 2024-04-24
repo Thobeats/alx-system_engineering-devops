@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# uses Apache to run on container
+# return page with Hello Holberton when querying the root of it
+apt-get -y update
+apt-get -y install apache2
+echo "ServerName localhost" >> sudo tee -a /etc/apache2/apache2.conf
+echo "Hello Holberton"
+service apache2 start
+
