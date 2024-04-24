@@ -8,6 +8,6 @@ sudo chown "$USER":"$USER" /var/www/html/
 # Create index.html file with "Hello World!"
 echo "Hello World!" | sudo tee /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
-sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.github.com/Thobeats permanent;' /etc/nginx/sites-available/default
-sudo sed -i '/listen 80 default_server/a error_page 404 /custom_404.html; location = /custom_404.html {root /usr/share/nginx/html;\n internal;}' /etc/nginx/sites-available/default
+sudo sed -i '/listen 80 default_server/a  rewrite ^/redirect_me https://www.github.com/Thobeats permanent;' /etc/nginx/sites-available/default
+sudo sed -i '/listen 80 default_server/a  error_page 404 /custom_404.html;\n location = /custom_404.html\n  {\n  root /var/www/html;\n internal;\n}' /etc/nginx/sites-available/default
 sudo service nginx restart
