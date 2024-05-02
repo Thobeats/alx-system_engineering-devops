@@ -14,7 +14,7 @@ frontend idayisit.tech
 backend web_servers
         balance roundrobin
         server 530680-web-01 54.237.67.242
-        server 530680-web-02 54.146.66.111
+        server 530680-web-02 52.3.245.137
 ' >> /etc/haproxy/haproxy.cfg
 
 # Restart HAproxy service
