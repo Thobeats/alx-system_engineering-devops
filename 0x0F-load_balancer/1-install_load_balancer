@@ -10,7 +10,7 @@ USER=$(whoami)
 sudo chown "$USER":"$USER" /etc/haproxy/haproxy.cfg
 echo '
 frontend idayisit.tech
-        bind 0:8011
+        bind *:8011
         default_backend web_servers
 
 backend web_servers
