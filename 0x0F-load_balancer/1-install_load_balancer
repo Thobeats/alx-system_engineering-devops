@@ -6,6 +6,8 @@ sudo apt-get -y update
 sudo apt-get -y install haproxy
 
 # Configure haproxy configuration file to distribute requests using a roundrobin algorithm
+USER=$(whoami)
+sudo chown "$USER":"$USER" /etc/haproxy/haproxy.cfg
 echo '
 frontend idayisit.tech
         bind 0:8011
