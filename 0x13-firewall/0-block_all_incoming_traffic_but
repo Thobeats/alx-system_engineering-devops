@@ -2,6 +2,8 @@ sudo apt-get update
 sudo apt-get install ufw
 sudo ufw enable
 sudo ufw default deny allow
-sudo ufw allow proto tcp from any to any 22,443,80
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
 sudo ufw reload
 
