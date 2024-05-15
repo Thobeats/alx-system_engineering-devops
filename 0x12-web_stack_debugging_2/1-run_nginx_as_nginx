@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Write a Script the runs Nginx container as nginx user
+
+# Stop nginx if it's already running
+service nginx stop
+
+# Modify nginx configuration
+sed -i 's/user\s*nginx;/user nginx;/' /etc/nginx/nginx.conf
+sed -i 's/listen\s*80;/listen 8080;/' /etc/nginx/sites-available/default
+
+# Start nginx
+service nginx start
