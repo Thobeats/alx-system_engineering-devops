@@ -5,8 +5,13 @@
 service nginx stop
 
 # Modify nginx configuration
+chown nginx:nginx /etc/nginx/nginx.conf
+chown nginx:nginx /etc/nginx/sites-available/default
+chmod u+rwx /etc/nginx/nginx.conf
+chmod u+rwx /etc/nginx/sites-available/default
 sed -i 's/user\s*nginx;/user nginx;/' /etc/nginx/nginx.conf
 sed -i 's/listen\s*80;/listen 8080;/' /etc/nginx/sites-available/default
 
 # Start nginx
-service nginx start
+pkill apache2
+su nginx service nginx restart
