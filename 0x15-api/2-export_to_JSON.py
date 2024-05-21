@@ -20,9 +20,8 @@ if __name__ == "__main__":
     all_tasks = api_req.json()
     filename = "{}.json".format(employee_id)
     with open(filename, 'w', newline='') as file:
-       json.dump({employee_id: [{
+        json.dump({employee_id: [{
             "task": task.get("title"),
             "completed": task.get("completed"),
             "username": user['username']
         } for task in all_tasks]}, file)
-        
