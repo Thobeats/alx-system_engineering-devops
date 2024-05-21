@@ -22,5 +22,5 @@ if __name__ == "__main__":
     with open(filename, 'w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         [writer.writerow(
-            [employee_id, user['name'], task['completed'], task['title']]
+            [employee_id, user['username'], task['completed'], task['title']]
         ) for task in all_tasks]
