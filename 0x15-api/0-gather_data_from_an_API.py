@@ -10,19 +10,20 @@ from sys import argv
 
 if __name__ == "__main__":
     employee_id = argv[1]
-    user_url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
-    url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(employee_id)
+    url = "https://jsonplaceholder.typicode.com"
+    user_url = "{}/users/{}".format(url, employee_id)
+    todo = "{}/users/{}/todos".format(url, employee_id)
     user_req = requests.get(user_url)
     user = user_req.json()
-    api_req = requests.get(url)
+    api_req = requests.get(todo)
     all_tasks = api_req.json()
     total = len(all_tasks)
     completed_tasks = list(filter(lambda task: task['completed'] is True,
-                                all_tasks))
+                                  all_tasks))
     completed = len(completed_tasks)
     response = "Employee {} is done with tasks({}/{}):\n".format(user['name'],
-                                                                completed,
-                                                                total)
+                                                                 completed,
+                                                                 total)
     for task in completed_tasks:
         response += "   {}\n".format(task['title'])
     print(response)
