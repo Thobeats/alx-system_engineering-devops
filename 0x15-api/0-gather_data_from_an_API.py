@@ -21,9 +21,8 @@ if __name__ == "__main__":
     completed_tasks = list(filter(lambda task: task['completed'] is True,
                                   all_tasks))
     completed = len(completed_tasks)
-    response = "Employee {} is done with tasks({}/{}):\n".format(user['name'],
-                                                                 completed,
-                                                                 total)
+    print("Employee {} is done with tasks({}/{}):".format(user['name'],
+                                                          completed,
+                                                          total))
     for task in completed_tasks:
-        response += "\t {}\n".format(task['title'])
-    print(response)
+        print("\t {}".format(task['title']))
