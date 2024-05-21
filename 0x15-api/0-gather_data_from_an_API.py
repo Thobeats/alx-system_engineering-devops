@@ -25,5 +25,5 @@ if __name__ == "__main__":
                                                                  completed,
                                                                  total)
     for task in completed_tasks:
-        response += "   {}\n".format(task['title'])
+        response += "    {}\n".format(task['title'])
     print(response)
