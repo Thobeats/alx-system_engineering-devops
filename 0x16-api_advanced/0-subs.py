@@ -10,7 +10,7 @@ the function should return 0.
 import requests
 
 
-def top_ten(subreddit):
+def number_of_subscribers(subreddit):
     """Number of Subreddit Subscribers
     Keyword arguments:
     subreddit -- the subreddit to check e.g programming.
