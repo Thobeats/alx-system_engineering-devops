@@ -14,7 +14,7 @@ def top_ten(subreddit):
     subreddit -- the subreddit to check e.g programming.
     Return: the number of subscribers or 0 if the subreddit doesn't exist
     """
-    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {"user-agent": "user"}
     reddit_request = requests.get(url,
                                   headers=headers,
