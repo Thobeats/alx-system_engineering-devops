@@ -12,7 +12,6 @@ import requests
 
 def number_of_subscribers(subreddit):
     """Number of Subreddit Subscribers
-
     Keyword arguments:
     subreddit -- the subreddit to check e.g programming.
     Return: the number of subscribers or 0 if the subreddit doesn't exist
