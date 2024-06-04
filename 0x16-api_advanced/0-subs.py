@@ -8,8 +8,6 @@ If an invalid subreddit is given,
 the function should return 0.
 """
 
-import requests
-
 
 def number_of_subscribers(subreddit):
     """Number of Subreddit Subscribers
@@ -18,6 +16,8 @@ def number_of_subscribers(subreddit):
     subreddit -- the subreddit to check e.g programming.
     Return: the number of subscribers or 0 if the subreddit doesn't exist
     """
+    import requests
+
     url = "https://www.reddit.com/r/{}/about/.json".format(subreddit)
     headers = {"User-Agent": "Python File"}
     reddit_request = requests.get(url,
