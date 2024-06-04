@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """
-Write a function that queries the
-Reddit API and prints the titles
-of the first 10 hot posts listed
+Write a function that queries the Reddit API
+and returns the number of subscribers
+(not active users, total subscribers)
 for a given subreddit.
+If an invalid subreddit is given,
+the function should return 0.
 """
 import requests
 
@@ -19,7 +21,8 @@ def top_ten(subreddit):
     reddit_request = requests.get(url,
                                   headers=headers,
                                   allow_redirects=False)
-    if reddit_request.status_code != 200:
+    if (reddit_request.status_code != 200
+            or 'data' not in reddit_request.json()):
         return 0
     reddit_json = reddit_request.json()
     return reddit_json.get('data').get('subscribers')
