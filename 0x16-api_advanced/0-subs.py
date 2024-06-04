@@ -1,16 +1,14 @@
 #!/usr/bin/python3
 """
-Write a function that queries the Reddit API
-and returns the number of subscribers
-(not active users, total subscribers)
+Write a function that queries the
+Reddit API and prints the titles
+of the first 10 hot posts listed
 for a given subreddit.
-If an invalid subreddit is given,
-the function should return 0.
 """
 import requests
 
 
-def number_of_subscribers(subreddit):
+def top_ten(subreddit):
     """Number of Subreddit Subscribers
     Keyword arguments:
     subreddit -- the subreddit to check e.g programming.
