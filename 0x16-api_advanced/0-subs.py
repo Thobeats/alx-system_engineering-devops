@@ -19,7 +19,7 @@ def number_of_subscribers(subreddit):
     import requests
 
     url = "https://www.reddit.com/r/{}/about/.json".format(subreddit)
-    headers = {"User-Agent": "Python File"}
+    headers = {"user-agent": "Python File"}
     reddit_request = requests.get(url,
                                   headers=headers,
                                   allow_redirects=False)
