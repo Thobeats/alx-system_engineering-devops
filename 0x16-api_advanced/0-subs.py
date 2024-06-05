@@ -24,6 +24,6 @@ def number_of_subscribers(subreddit):
         reddit_json = reddit_request.json()
         return reddit_json.get('data').get('subscribers')
     except requests.JSONDecodeError as e:
-        return 0
+        return (0)
     except Exception as e:
-        return 0
+        return (0)
