@@ -37,9 +37,9 @@ def count_words(subreddit, word_list, hot_list={}, after="", dist=""):
     for reddit in reddit_json['data']['children']:
         title = reddit.get('data').get('title')
         for word in word_list:
-            if word not in hot_list.keys():
-                hot_list[word] = 0
-            hot_list[word] += title.lower().count(word.lower())
+            if word.lower() not in hot_list.keys():
+                hot_list[word.lower()] = 0
+            hot_list[word.lower()] += title.lower().count(word.lower())
     if after is not None:
         return count_words(subreddit, word_list, hot_list, after, dist)
     sorted_keys = list(hot_list.keys())
