@@ -12,8 +12,6 @@ def number_of_subscribers(subreddit):
     subreddit -- the subreddit to check e.g programming.
     Return: the number of subscribers or 0 if the subreddit doesn't exist
     """
-    if (subreddit is None):
-        return None
     url = "https://www.reddit.com/r/{}/about/.json".format(subreddit)
     headers = {"user-agent": "user"}
     reddit_request = requests.get(url,
@@ -22,4 +20,6 @@ def number_of_subscribers(subreddit):
     if (reddit_request.status_code != 200):
         return 0
     reddit_json = reddit_request.json()
+    if 'data' not in reddit_json:
+        return 0
     return reddit_json.get('data').get('subscribers')
